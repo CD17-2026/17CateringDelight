@@ -443,7 +443,7 @@ if (galleryItems.length > 0) {
         deliveryStatus.style.color = "var(--gold-dark)";
       } else {
         if (parsedNum % 2 === 0) {
-          deliveryStatus.textContent = "We deliver here! A standard $35 delivery fee applies.";
+          deliveryStatus.textContent = "We deliver here! A standard RM35 delivery fee applies.";
           deliveryStatus.style.color = "var(--gold-dark)";
         } else {
           deliveryStatus.textContent = "Excellent news! Your location qualifies for FREE delivery!";
