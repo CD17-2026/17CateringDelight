@@ -2292,9 +2292,3 @@ h1.page-heading::after {
         grid-template-columns:1fr;
     }
 }
-
-/* Fix Event Date & Time field */
-#book-datetime {
-  min-width: 0;
-}
-
