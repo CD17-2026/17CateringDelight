@@ -221,14 +221,59 @@
 
   <!-- Success Notification Modals -->
   <div class="success-modal" id="success-modal">
-    <div class="modal-card text-center card-glass">
-      <div class="modal-icon text-success"><i class="fa-solid fa-circle-check"></i></div>
-      <h3 id="modal-heading">Thank You!</h3>
-      <p id="modal-body">Your request has been successfully received. A coordinator will get back to you within 24 hours.</p>
-      <div class="modal-summary-container" id="modal-summary-box"></div>
-      <button class="btn btn-maroon" id="modal-close-btn">Dismiss</button>
+  <div class="modal-card text-center card-glass">
+    <div class="modal-icon text-success">
+      <i class="fa-solid fa-circle-check"></i>
+    </div>  
+	  
+    <h3 id="modal-heading">Thank You!</h3>
+    <p id="modal-body">
+      Your request has been successfully received. A coordinator will get back to you within 24 hours.
+    </p>
+	  
+    <div class="modal-summary-container" id="modal-summary-box"></div>
+    <div class="modal-actions">
+     <button type="button" class="btn btn-outline" id="modal-close-btn">
+      Later
+     </button>
+     <button type="button" class="btn btn-maroon" id="payment-btn">
+      Proceed to Payment
+     </button>
     </div>
+   </div>
   </div>
+
+  <!-- ADD PAYMENT MODAL -->
+  <div class="success-modal" id="payment-modal">
+  <div class="modal-card text-center card-glass">
+    <div class="modal-icon text-success">
+      <i class="fa-solid fa-wallet"></i>
+    </div>
+
+    <h3>Deposit Payment</h3>
+    <p>
+      To secure your booking, please make a deposit payment via Touch'n Go eWallet.
+    </p>
+    <img
+      src="assets/TnG_owner.jpg"
+      alt="TNG QR Code"
+      style="width:250px;max-width:100%;margin:20px auto;display:block;">
+    <p>
+      After payment, please send your receipt via WhatsApp.
+    </p>
+
+    <div class="modal-actions">
+      <button class="btn btn-outline" id="close-payment-modal">
+        Close
+      </button>
+      <a href="https://chat.whatsapp.com/KqgLjMQf8G0Cyn4yDADx8A"
+        target="_blank"
+        class="btn btn-maroon">
+        Send Receipt
+      </a>
+     </div>
+    </div>
+   </div>
 
   <!-- Footer -->
   <footer class="main-footer">
