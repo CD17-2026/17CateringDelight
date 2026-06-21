@@ -2120,6 +2120,29 @@ h1.page-heading::after {
   }
 }
 
+@media screen and (max-width: 768px) {
+    /* Book Now button */
+    .header-ctas .btn,
+    .book-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Request Quote button */
+    .pkg-actions .btn,
+    .quote-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+}
+
+
 
 /* Extra Small Devices (max-width: 480px) */
 @media screen and (max-width: 480px) {
