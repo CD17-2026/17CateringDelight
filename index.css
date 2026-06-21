@@ -2260,24 +2260,3 @@ h1.page-heading::after {
         grid-template-columns:1fr;
     }
 }
-
-/* datetime field to match other inputs */
-#book-datetime {
-    width: 100%;
-    height: 50px; /* same visual height as other fields */
-    padding: 0.85rem 1.25rem;
-    box-sizing: border-box;
-    font-size: 16px;
-    min-width: 0;
-}
-
-@media screen and (max-width: 768px) {
-    #book-datetime {
-        width: 100% !important;
-    }
-
-    /* Prevent grid item overflow */
-    .form-group {
-        min-width: 0;
-    }
-}
