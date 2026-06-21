@@ -697,6 +697,20 @@ if (galleryItems.length > 0) {
       });
     });
   }
+   
+   // PAYMENT MODAL
+   document.addEventListener('click', function (e) {
+   if (e.target.closest('#payment-btn')) {
+    document.getElementById('success-modal').classList.remove('open');
+    document.getElementById('payment-modal').classList.add('open');
+  }
+
+  if (e.target.closest('#close-payment-modal')) {
+    document.getElementById('payment-modal').classList.remove('open');
+  }
+
+});
+   
 
   // 9B. Contact Form submit
   if (contactForm) {
