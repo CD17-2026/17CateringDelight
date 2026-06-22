@@ -1437,12 +1437,11 @@ h1.page-heading::after {
 
     height: 50px;
 
-    padding: 0 1.25rem;
+    padding: 0 1rem;
 
     box-sizing: border-box;
 
     border: 1px solid var(--cream-dark);
-
     border-radius: var(--radius-sm);
 
     background: var(--white);
@@ -1453,36 +1452,44 @@ h1.page-heading::after {
 
     font-size: 16px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    display: block;
-
-    text-align: left;
+    text-align: center;
 
     overflow: hidden;
 
-
     -webkit-appearance: none;
-
     appearance: none;
 
-
     transition: all var(--transition-fast);
-
 }
 
 
-/* Chrome / Android */
-
+/* Chrome / Android datetime text alignment */
 .form-group input[type="datetime-local"]::-webkit-datetime-edit {
 
-    text-align: left;
+    text-align: center;
 
 }
 
 
 .form-group input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
 
-    justify-content: flex-start;
+    justify-content: center;
+
+}
+
+
+/* Focus */
+.form-group input[type="datetime-local"]:focus {
+
+    outline: none;
+
+    border-color: var(--gold-main);
+
+    box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
 
 }
 
@@ -1494,6 +1501,53 @@ h1.page-heading::after {
 @media (max-width: 768px) {
 
 
+    .booking-form-card {
+
+        padding: 2rem;
+
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .form-group {
+
+        min-width: 0;
+
+        width: 100%;
+
+    }
+
+
+    .form-group.full-width {
+
+        grid-column: span 1;
+
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+
+
+        width: 100%;
+
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+    }
+
+
+
+    /* DATE & TIME MOBILE CENTER FIX */
+
     .form-group input[type="datetime-local"] {
 
 
@@ -1502,37 +1556,35 @@ h1.page-heading::after {
         height: 50px;
 
 
-        padding: 0 1.25rem;
+        padding-left: 0;
+
+        padding-right: 0;
 
 
-        display: block;
+        text-align: center;
 
 
-        text-align: left;
+        display: flex;
 
+        align-items: center;
 
-    }
-
-
-    .form-group input[type="datetime-local"]::-webkit-datetime-edit {
-
-
-        text-align: left;
+        justify-content: center;
 
 
     }
 
 
-    .form-group input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
+
+    .form-group input[type="datetime-local"]::-webkit-date-and-time-value {
 
 
-        justify-content: flex-start;
+        text-align: center;
 
 
     }
+
 
 }
-
 /* ==========================================================================
    7. Quotation Request Page (Calculator Details)
    ========================================================================== */
