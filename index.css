@@ -1526,13 +1526,11 @@ h1.page-heading::after {
     }
 
 
-
     .form-grid {
 
         grid-template-columns: 1fr;
 
     }
-
 
 
     .form-group {
@@ -1544,7 +1542,6 @@ h1.page-heading::after {
     }
 
 
-
     .form-group.full-width {
 
         grid-column: span 1;
@@ -1552,11 +1549,8 @@ h1.page-heading::after {
     }
 
 
-
     .form-group input,
-
     .form-group select,
-
     .form-group textarea {
 
         width: 100%;
@@ -1569,31 +1563,44 @@ h1.page-heading::after {
 
 
 
-   /* ==========================================================================
-   MOBILE - EVENT DATE & TIME LEFT ALIGN
-   ========================================================================== */
-
-@media (max-width: 768px) {
+    /* EVENT DATE & TIME MOBILE - SAME AS DESKTOP */
 
     .form-group input[type="datetime-local"] {
 
         width: 100%;
 
+        max-width: 100%;
+
+        min-width: 0;
+
+
         height: 50px;
 
-        padding-left: 1rem;
 
-        padding-right: 1rem;
+        padding: 0 1rem;
+
+
+        box-sizing: border-box;
 
 
         display: block;
 
+
         text-align: left;
 
-        box-sizing: border-box;
+
+        overflow: hidden;
+
+
+        -webkit-appearance: none;
+
+        appearance: none;
 
     }
 
+
+
+    /* Chrome / Android Mobile */
 
     .form-group input[type="datetime-local"]::-webkit-date-and-time-value {
 
@@ -1616,6 +1623,7 @@ h1.page-heading::after {
         justify-content: flex-start;
 
     }
+
 
 }
    
