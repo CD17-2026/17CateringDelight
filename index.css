@@ -1523,9 +1523,7 @@ h1.page-heading::after {
     }
 
     .form-grid {
-        display: grid;
         grid-template-columns: 1fr;
-        gap: 1.5rem;
     }
 
     .form-group {
@@ -1533,29 +1531,14 @@ h1.page-heading::after {
         min-width: 0;
     }
 
-    .form-group.full-width {
-        grid-column: span 1;
-    }
-
     .form-group input,
     .form-group select,
     .form-group textarea {
         width: 100%;
         max-width: 100%;
-        min-width: 0;
         box-sizing: border-box;
     }
 
-    /* Reset datetime field to browser default */
-    .form-group input[type="datetime-local"] {
-        width: 100%;
-        height: auto;
-        min-width: 0;
-        max-width: 100%;
-        box-sizing: border-box;
-
-        
-    }
 }
    
 /* ==========================================================================
