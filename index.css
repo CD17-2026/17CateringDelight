@@ -1439,8 +1439,7 @@ h1.page-heading::after {
     display: block;
     box-sizing: border-box;
     overflow: hidden;
-    -webkit-appearance: none;
-    appearance: none;
+    
 }
 
 /* ==========================================================================
