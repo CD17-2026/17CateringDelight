@@ -1539,7 +1539,17 @@ h1.page-heading::after {
         box-sizing: border-box;
     }
 
+/* Date & Time */
+    .form-group input[type="datetime-local"] {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        -webkit-appearance: auto;
+        appearance: auto;
+    }
 }
+   
    
 /* ==========================================================================
    7. Quotation Request Page (Calculator Details)
