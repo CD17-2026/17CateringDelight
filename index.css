@@ -1543,7 +1543,7 @@ h1.page-heading::after {
 
         display: flex;
 
-        align-items: left;
+        align-items: center;
 
         justify-content: flex-start;
 
