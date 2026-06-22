@@ -1556,8 +1556,9 @@ h1.page-heading::after {
 
         height: 50px;
 
-        padding: 1 1.25rem;
+       padding-left:1.25rem;
 
+        padding-right:1rem;
         box-sizing: border-box;
 
 
