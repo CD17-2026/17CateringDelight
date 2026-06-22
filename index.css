@@ -1432,6 +1432,9 @@ h1.page-heading::after {
 .form-group input[type="datetime-local"] {
 
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
     height: 50px;
 
     padding: 0 1.25rem;
@@ -1451,74 +1454,84 @@ h1.page-heading::after {
     font-size: 16px;
 
 
+    display: block;
+
     text-align: left;
 
-    direction: ltr;
+    overflow: hidden;
 
 
     -webkit-appearance: none;
+
     appearance: none;
+
+
+    transition: all var(--transition-fast);
 
 }
 
 
 /* Chrome / Android */
 
-.form-group input[type="datetime-local"]::-webkit-date-and-time-value {
+.form-group input[type="datetime-local"]::-webkit-datetime-edit {
 
     text-align: left;
 
-    margin-left: 0;
-
 }
 
 
-/* Focus */
+.form-group input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
 
-.form-group input[type="datetime-local"]:focus {
-
-    outline: none;
-
-    border-color: var(--gold-main);
-
-    box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
+    justify-content: flex-start;
 
 }
-
 
 
 /* ==========================================================================
    MOBILE RESPONSIVE
    ========================================================================== */
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
 
 
     .form-group input[type="datetime-local"] {
 
-        width:100%;
 
-        height:50px;
+        width: 100%;
 
-        padding:0 1.25rem;
+        height: 50px;
 
-        text-align:left;
 
-        direction:ltr;
+        padding: 0 1.25rem;
+
+
+        display: block;
+
+
+        text-align: left;
+
 
     }
 
 
-    .form-group input[type="datetime-local"]::-webkit-date-and-time-value {
+    .form-group input[type="datetime-local"]::-webkit-datetime-edit {
 
-        text-align:left;
 
-        margin-left:0;
+        text-align: left;
+
+
+    }
+
+
+    .form-group input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
+
+
+        justify-content: flex-start;
+
 
     }
 
 }
-
 
 /* ==========================================================================
    7. Quotation Request Page (Calculator Details)
