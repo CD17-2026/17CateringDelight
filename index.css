@@ -1462,7 +1462,6 @@ h1.page-heading::after {
 
 
     -webkit-appearance: none;
-
     appearance: none;
 
 
@@ -1471,7 +1470,7 @@ h1.page-heading::after {
 }
 
 
-/* Chrome / Android */
+/* Chrome / Android datetime text alignment */
 
 .form-group input[type="datetime-local"]::-webkit-datetime-edit {
 
@@ -1487,6 +1486,19 @@ h1.page-heading::after {
 }
 
 
+/* Focus */
+
+.form-group input[type="datetime-local"]:focus {
+
+    outline: none;
+
+    border-color: var(--gold-main);
+
+    box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
+
+}
+
+
 /* ==========================================================================
    MOBILE RESPONSIVE
    ========================================================================== */
@@ -1494,42 +1506,88 @@ h1.page-heading::after {
 @media (max-width: 768px) {
 
 
-    .form-group input[type="datetime-local"] {
+    .booking-form-card {
 
+        padding: 2rem;
+
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .form-group {
+
+        min-width: 0;
+
+        width: 100%;
+
+    }
+
+
+    .form-group.full-width {
+
+        grid-column: span 1;
+
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+    }
+
+
+
+    /* EVENT DATE & TIME MOBILE LEFT ALIGN */
+
+    .form-group input[type="datetime-local"] {
 
         width: 100%;
 
         height: 50px;
 
-
         padding: 0 1.25rem;
+
+        box-sizing: border-box;
 
 
         display: block;
 
-
         text-align: left;
 
 
     }
 
+
+
+    /* Chrome / Android Mobile */
 
     .form-group input[type="datetime-local"]::-webkit-datetime-edit {
 
-
         text-align: left;
 
-
     }
+
 
 
     .form-group input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
 
-
         justify-content: flex-start;
 
-
     }
+
 
 }
 
