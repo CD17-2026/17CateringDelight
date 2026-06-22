@@ -1872,6 +1872,20 @@ h1.page-heading::after {
   border-left: 3px solid var(--gold-main);
 }
 
+.whatsapp-link {
+    background-color: #25D366;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.whatsapp-link:hover {
+    background-color: #1da851;
+}
+
+
 /* ==========================================================================
    Main Footer Styling
    ========================================================================== */
