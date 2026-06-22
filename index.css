@@ -1518,28 +1518,54 @@ h1.page-heading::after {
 
 @media (max-width: 768px) {
 
+    /* General Layout */
+    .container,
+    .booking-container,
+    .booking-wrapper {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+
+    /* Booking Card */
     .booking-form-card {
-        padding: 2rem;
+        width: 100%;
+        padding: 1.5rem;
+        margin: 0;
+        box-sizing: border-box;
     }
 
+    /* Form Grid */
     .form-grid {
+        display: grid;
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: 100%;
     }
 
+    /* Form Groups */
     .form-group {
         width: 100%;
         min-width: 0;
     }
 
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+
+    /* Inputs */
     .form-group input,
     .form-group select,
     .form-group textarea {
         width: 100%;
         max-width: 100%;
+        min-width: 0;
         box-sizing: border-box;
+        font-size: 16px;
     }
 
-/* Date & Time */
+    /* Date & Time */
     .form-group input[type="datetime-local"] {
         width: 100%;
         max-width: 100%;
@@ -1547,6 +1573,38 @@ h1.page-heading::after {
         box-sizing: border-box;
         -webkit-appearance: auto;
         appearance: auto;
+    }
+
+    /* Textarea */
+    .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    /* Buttons */
+    .btn,
+    .submit-btn {
+        width: 100%;
+    }
+
+    /* Header */
+    .navbar,
+    .header-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Prevent Horizontal Scroll */
+    body,
+    html {
+        overflow-x: hidden;
+        width: 100%;
     }
 }
    
