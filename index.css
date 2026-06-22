@@ -1355,6 +1355,7 @@ h1.page-heading::after {
     color: var(--error);
 }
 
+
 /* INPUTS & SELECTS */
 .form-group input,
 .form-group select {
@@ -1362,16 +1363,12 @@ h1.page-heading::after {
     height: 50px;
     padding: 0 1.25rem;
     box-sizing: border-box;
-
     border: 1px solid var(--cream-dark);
     border-radius: var(--radius-sm);
-
     background: var(--white);
     color: var(--text-dark);
-
     font-family: var(--font-body);
     font-size: 16px;
-
     transition: all var(--transition-fast);
 }
 
@@ -1381,16 +1378,12 @@ h1.page-heading::after {
     min-height: 120px;
     padding: 1rem 1.25rem;
     box-sizing: border-box;
-
     border: 1px solid var(--cream-dark);
     border-radius: var(--radius-sm);
-
     background: var(--white);
     color: var(--text-dark);
-
     font-family: var(--font-body);
     font-size: 16px;
-
     resize: vertical;
     transition: all var(--transition-fast);
 }
@@ -1408,7 +1401,8 @@ h1.page-heading::after {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--gold-main);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+
+    box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
 }
 
 /* ERROR STYLES */
@@ -1432,24 +1426,28 @@ h1.page-heading::after {
     display: block;
 }
 
+/* EVENT DATE & TIME INPUT */
 .form-group input[type="datetime-local"] {
     width: 100%;
     max-width: 100%;
     min-width: 0;
+    height: 50px;
     display: block;
     box-sizing: border-box;
     overflow: hidden;
     -webkit-appearance: none;
     appearance: none;
-    
+
+    /* CENTER DATE & TIME TEXT */
+    text-align: left-align;
 }
+
 
 /* ==========================================================================
    MOBILE RESPONSIVE
    ========================================================================== */
 
 @media (max-width: 768px) {
-
     .booking-form-card {
         padding: 2rem;
     }
@@ -1480,7 +1478,9 @@ h1.page-heading::after {
         max-width: 100%;
         min-width: 0;
         font-size: 16px;
+        text-align: center;
     }
+
 }
 
 /* ==========================================================================
