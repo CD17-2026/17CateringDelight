@@ -1437,8 +1437,6 @@ h1.page-heading::after {
     overflow: hidden;
     -webkit-appearance: none;
     appearance: none;
-
-    /* CENTER DATE & TIME TEXT */
     text-align: left-align;
 }
 
@@ -1478,19 +1476,10 @@ h1.page-heading::after {
         max-width: 100%;
         min-width: 0;
         font-size: 16px;
-        text-align: center;
+        text-align: left-align;
     }
-
 }
 
-/* Center datetime-local text */
-.form-group input[type="datetime-local"]::-webkit-datetime-edit {
-    text-align: center;
-}
-
-.form-group input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
-    justify-content: center;
-}
 
 /* ==========================================================================
    7. Quotation Request Page (Calculator Details)
