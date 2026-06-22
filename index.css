@@ -1441,10 +1441,10 @@ h1.page-heading::after {
     color: var(--text-dark);
     font-family: var(--font-body);
     font-size: 16px;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
    
     -webkit-appearance: none;
@@ -1455,11 +1455,11 @@ h1.page-heading::after {
 
 /* Chrome / Android datetime text alignment */
 .form-group input[type="datetime-local"]::-webkit-datetime-edit {
-    text-align: center;
+    text-align: left;
 }
 
 .form-group input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
-    justify-content: center;
+    justify-content: flwx-start;
 
 }
 /* Focus */
@@ -1509,15 +1509,15 @@ h1.page-heading::after {
         height: 50px;
         padding-left: 0;
         padding-right: 0;
-        text-align: center;
-        display: flex;
+        text-align: left;
+        display: block;
         align-items: center;
         justify-content: center;
 
     }
 
     .form-group input[type="datetime-local"]::-webkit-date-and-time-value {
-        text-align: center;
+        text-align: left;
     }
 }
 
