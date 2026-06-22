@@ -1432,6 +1432,17 @@ h1.page-heading::after {
     display: block;
 }
 
+.form-group input[type="datetime-local"] {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
 /* ==========================================================================
    MOBILE RESPONSIVE
    ========================================================================== */
@@ -1446,6 +1457,11 @@ h1.page-heading::after {
         grid-template-columns: 1fr;
     }
 
+    .form-group {
+        min-width: 0;
+        width: 100%;
+    }
+
     .form-group.full-width {
         grid-column: span 1;
     }
@@ -1455,6 +1471,14 @@ h1.page-heading::after {
     .form-group textarea {
         width: 100%;
         max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-group input[type="datetime-local"] {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        font-size: 16px;
     }
 }
 
