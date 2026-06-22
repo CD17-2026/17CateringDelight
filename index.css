@@ -1483,6 +1483,15 @@ h1.page-heading::after {
 
 }
 
+/* Center datetime-local text */
+.form-group input[type="datetime-local"]::-webkit-datetime-edit {
+    text-align: center;
+}
+
+.form-group input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
+    justify-content: center;
+}
+
 /* ==========================================================================
    7. Quotation Request Page (Calculator Details)
    ========================================================================== */
