@@ -1471,13 +1471,18 @@ h1.page-heading::after {
         box-sizing: border-box;
     }
 
-    .form-group input[type="datetime-local"] {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        font-size: 16px;
-        text-align: left-align;
-    }
+   /* EVENT DATE & TIME INPUT */
+.form-group input[type="datetime-local"] {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: 50px;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    -webkit-appearance: none;
+    appearance: none;
+    text-align: left-align;
 }
 
 
