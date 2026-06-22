@@ -1554,8 +1554,7 @@ h1.page-heading::after {
         max-width: 100%;
         box-sizing: border-box;
 
-        -webkit-appearance: auto;
-        appearance: auto;
+        
     }
 }
    
