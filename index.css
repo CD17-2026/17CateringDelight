@@ -1538,14 +1538,14 @@ h1.page-heading::after {
         padding-right: 0;
 
 
-        text-align: left-align;
+        text-align: left;
 
 
         display: flex;
 
-        align-items: center;
+        align-items: left;
 
-        justify-content: center;
+        justify-content: flex-start;
 
 
     }
@@ -1555,7 +1555,7 @@ h1.page-heading::after {
     .form-group input[type="datetime-local"]::-webkit-date-and-time-value {
 
 
-        text-align: left-align;
+        text-align: left;
 
 
     }
