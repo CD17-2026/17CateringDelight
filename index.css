@@ -1569,65 +1569,53 @@ h1.page-heading::after {
 
 
 
-    /* MOBILE EVENT DATE & TIME */
+   /* ==========================================================================
+   MOBILE - EVENT DATE & TIME LEFT ALIGN
+   ========================================================================== */
+
+@media (max-width: 768px) {
 
     .form-group input[type="datetime-local"] {
-
 
         width: 100%;
 
         height: 50px;
 
+        padding-left: 1rem;
 
-        padding: 0 1rem;
+        padding-right: 1rem;
 
 
         display: block;
 
-
         text-align: left;
 
-
-        direction: ltr;
-
+        box-sizing: border-box;
 
     }
 
-
-
-    /* Chrome Mobile */
 
     .form-group input[type="datetime-local"]::-webkit-date-and-time-value {
 
-
         text-align: left;
-
 
         margin-left: 0;
 
-
     }
-
 
 
     .form-group input[type="datetime-local"]::-webkit-datetime-edit {
 
-
         text-align: left;
 
-
     }
-
 
 
     .form-group input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
 
-
-        justify-content: center;
-
+        justify-content: flex-start;
 
     }
-
 
 }
    
