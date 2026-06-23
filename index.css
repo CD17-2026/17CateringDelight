@@ -1434,33 +1434,53 @@ h1.page-heading::after {
 
 /* DATETIME INPUT */
 .form-group input[type="datetime-local"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
     height: 50px;
-    padding: 0 1.25rem;
+    line-height: 50px;
     box-sizing: border-box;
-
-    display: block;
-    font-family: var(--font-body);
-    font-size: 16px;
-    color: var(--text-dark);
-
-    background: var(--white);
-    border: 1px solid var(--cream-dark);
-    border-radius: var(--radius-sm);
-
-    line-height: normal;
 }
 
-/* AUTOFILL FIX */
-.form-group input:-webkit-autofill,
-.form-group input:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0 1000px var(--white) inset;
-    -webkit-text-fill-color: var(--text-dark);
-    transition: background-color 9999s ease-in-out 0s;
+/* ==========================================================================
+   MOBILE RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    .booking-form-card {
+        padding: 2rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-group input[type="datetime-local"] {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+    }
 }
 
 /* ==========================================================================
