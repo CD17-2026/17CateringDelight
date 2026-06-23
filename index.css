@@ -1362,12 +1362,16 @@ h1.page-heading::after {
     height: 50px;
     padding: 0 1.25rem;
     box-sizing: border-box;
+
     border: 1px solid var(--cream-dark);
     border-radius: var(--radius-sm);
+
     background: var(--white);
     color: var(--text-dark);
+
     font-family: var(--font-body);
     font-size: 16px;
+
     transition: all var(--transition-fast);
 }
 
@@ -1377,12 +1381,16 @@ h1.page-heading::after {
     min-height: 120px;
     padding: 1rem 1.25rem;
     box-sizing: border-box;
+
     border: 1px solid var(--cream-dark);
     border-radius: var(--radius-sm);
+
     background: var(--white);
     color: var(--text-dark);
+
     font-family: var(--font-body);
     font-size: 16px;
+
     resize: vertical;
     transition: all var(--transition-fast);
 }
@@ -1400,13 +1408,14 @@ h1.page-heading::after {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--gold-main);
-    box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
 }
 
 /* ERROR STYLES */
 .error-msg {
     display: none;
     margin-top: 0.4rem;
+
     color: var(--error);
     font-size: 0.8rem;
     font-weight: 500;
@@ -1423,65 +1432,35 @@ h1.page-heading::after {
     display: block;
 }
 
-/* ==========================================================================
-   EVENT DATE & TIME INPUT
-   ========================================================================== */
-
+/* DATETIME INPUT */
 .form-group input[type="datetime-local"] {
-
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-
-    height: 50px;
-
-    padding: 0 1rem;
-
-    box-sizing: border-box;
-
-    border: 1px solid var(--cream-dark);
-
-    border-radius: var(--radius-sm);
-
-    background: var(--white);
-
-    color: var(--text-dark);
-
-    font-family: var(--font-body);
-
-    font-size: 16px;
-
-    display: block;
-
-    text-align: left;
-
-    overflow: hidden;
-
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
 
-    transition: all var(--transition-fast);
+    width: 100%;
+    height: 50px;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
+
+    display: block;
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--text-dark);
+
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    border-radius: var(--radius-sm);
+
+    line-height: normal;
 }
 
-/* Chrome / Android datetime text */
-.form-group input[type="datetime-local"]::-webkit-date-and-time-value {
-    text-align: left;
-    margin-left: 0;
-}
-
-.form-group input[type="datetime-local"]::-webkit-datetime-edit {
-    text-align: left;
-}
-
-.form-group input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
-    justify-content: flex-start;
-}
-
-/* Focus */
-.form-group input[type="datetime-local"]:focus {
-    outline: none;
-    border-color: var(--gold-main);
-    box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
+/* AUTOFILL FIX */
+.form-group input:-webkit-autofill,
+.form-group input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px var(--white) inset;
+    -webkit-text-fill-color: var(--text-dark);
+    transition: background-color 9999s ease-in-out 0s;
 }
 
 /* ==========================================================================
@@ -1515,34 +1494,22 @@ h1.page-heading::after {
         box-sizing: border-box;
     }
 
-    /* EVENT DATE & TIME MOBILE FIXED LEFT ALIGN */
     .form-group input[type="datetime-local"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
 
         width: 100%;
         height: 50px;
-
         padding: 0 1rem;
-
         box-sizing: border-box;
 
-        display: block;
+        font-size: 16px;
+        font-family: var(--font-body);
+        color: var(--text-dark);
+        background: var(--white);
 
-        text-align: left;
-
-        -webkit-appearance: none;
-        appearance: none;
-    }
-
-    .form-group input[type="datetime-local"]::-webkit-datetime-edit {
-        text-align: left;
-    }
-
-    .form-group input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
-        justify-content: flex-start;
-    }
-
-    .form-group input[type="datetime-local"]::-webkit-date-and-time-value {
-        text-align: left;
+        line-height: normal;
     }
 }
    
