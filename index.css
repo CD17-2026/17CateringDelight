@@ -1318,6 +1318,8 @@ h1.page-heading::after {
   color: var(--text-light);
 }
 
+WHAT IS THE EXPECTED OUTPUT 
+
 /* ==========================================================================
    6. Event Booking Page (Forms Layout)
    ========================================================================== */
@@ -1326,7 +1328,6 @@ h1.page-heading::after {
 .booking-form-card {
     padding: 4rem;
 }
-
 
 /* GRID LAYOUT */
 .form-grid {
@@ -1344,7 +1345,6 @@ h1.page-heading::after {
     grid-column: span 2;
 }
 
-
 /* LABELS */
 .form-group label {
     margin-bottom: 0.5rem;
@@ -1356,7 +1356,6 @@ h1.page-heading::after {
 .required {
     color: var(--error);
 }
-
 
 /* INPUTS & SELECTS */
 .form-group input,
@@ -1378,12 +1377,10 @@ h1.page-heading::after {
     transition: all var(--transition-fast);
 }
 
-
 /* TEXTAREA */
 .form-group textarea {
     width: 100%;
     min-height: 120px;
-
     padding: 1rem 1.25rem;
     box-sizing: border-box;
 
@@ -1400,7 +1397,6 @@ h1.page-heading::after {
     transition: all var(--transition-fast);
 }
 
-
 /* PLACEHOLDER TEXT */
 .form-group input::placeholder,
 .form-group textarea::placeholder {
@@ -1408,17 +1404,14 @@ h1.page-heading::after {
     font-size: 16px;
 }
 
-
 /* FOCUS STATE */
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--gold-main);
-
-    box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
 }
-
 
 /* ERROR STYLES */
 .error-msg {
@@ -1441,31 +1434,33 @@ h1.page-heading::after {
     display: block;
 }
 
-
-/* EVENT DATE & TIME INPUT */
+/* DATETIME INPUT */
 .form-group input[type="datetime-local"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
     height: 50px;
     padding: 0 1.25rem;
+
     box-sizing: border-box;
-
     display: block;
-    font-family: var(--font-body);
-    font-size: 16px;
-    color: var(--text-dark);
 
-    background: var(--white);
     border: 1px solid var(--cream-dark);
     border-radius: var(--radius-sm);
 
-    line-height: normal;
-    text-align: left;
-}
+    background: var(--white);
+    color: var(--text-dark);
 
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: normal;
+
+    transition: all var(--transition-fast);
+
+    -webkit-appearance: none;
+    appearance: none;
+}
 
 /* ==========================================================================
    MOBILE RESPONSIVE
@@ -1479,6 +1474,7 @@ h1.page-heading::after {
 
     .form-grid {
         grid-template-columns: 1fr;
+        gap: 1.25rem;
     }
 
     .form-group {
@@ -1495,33 +1491,28 @@ h1.page-heading::after {
     .form-group textarea {
         width: 100%;
         max-width: 100%;
+        min-width: 0;
         box-sizing: border-box;
     }
 
     .form-group input[type="datetime-local"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
 
-    width: 100%;
-    height: 50px;
-    padding: 0 1.25rem;
-    box-sizing: border-box;
+        height: 50px;
+        padding: 0 1rem;
 
-    display: block;
-    font-family: var(--font-body);
-    font-size: 16px;
-    color: var(--text-dark);
+        box-sizing: border-box;
+        display: block;
 
-    background: var(--white);
-    border: 1px solid var(--cream-dark);
-    border-radius: var(--radius-sm);
+        font-size: 16px;
+        line-height: normal;
 
-    line-height: normal;
-    text-align: left;
- }
-}
-   
+        -webkit-appearance: none;
+        appearance: none;
+    }
+}   
    
 /* ==========================================================================
    7. Quotation Request Page (Calculator Details)
