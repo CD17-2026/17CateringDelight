@@ -1499,21 +1499,12 @@ h1.page-heading::after {
     }
 
     .form-group input[type="datetime-local"] {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-
         width: 100%;
+        max-width: 100%;
+        min-width: 0;
         height: 50px;
-        padding: 0 1rem;
-        box-sizing: border-box;
-
+        line-height: 50px;
         font-size: 16px;
-        font-family: var(--font-body);
-        color: var(--text-dark);
-        background: var(--white);
-
-        line-height: normal;
     }
 }
    
