@@ -1448,71 +1448,38 @@ h1.page-heading::after {
 
 @media (max-width: 768px) {
 
+
     .booking-form-card {
         padding: 2rem;
     }
 
+
     .form-grid {
         grid-template-columns: 1fr;
     }
+
 
     .form-group {
         min-width: 0;
         width: 100%;
     }
 
-    .form-group.full-width {
-        grid-column: span 1;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    .form-group input[type="datetime-local"] {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        height: 50px;
-        line-height: 50px;
-        font-size: 16px;
-    }
-}
-
-/* ==========================================================================
-   MOBILE RESPONSIVE
-   ========================================================================== */
-
-@media (max-width: 768px) {
-
-    .booking-form-card {
-        padding: 2rem;
-    }
-
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .form-group {
-        min-width: 0;
-        width: 100%;
-    }
 
     .form-group.full-width {
         grid-column: span 1;
     }
 
+
     .form-group input,
     .form-group select,
     .form-group textarea {
+
         width: 100%;
         max-width: 100%;
+
         box-sizing: border-box;
     }
+
 
     .form-group input[type="datetime-local"] {
         -webkit-appearance: none;
@@ -1531,6 +1498,7 @@ h1.page-heading::after {
 
         line-height: normal;
     }
+
 }
    
    
