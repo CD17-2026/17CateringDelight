@@ -1445,41 +1445,31 @@ h1.page-heading::after {
 /* ==========================================================================
    MOBILE RESPONSIVE
    ========================================================================== */
-
-@media (max-width: 768px) {
-
-
+    @media (max-width: 768px) {
     .booking-form-card {
         padding: 2rem;
     }
 
-
     .form-grid {
         grid-template-columns: 1fr;
     }
-
 
     .form-group {
         min-width: 0;
         width: 100%;
     }
 
-
     .form-group.full-width {
         grid-column: span 1;
     }
 
-
     .form-group input,
     .form-group select,
     .form-group textarea {
-
         width: 100%;
         max-width: 100%;
-
         box-sizing: border-box;
     }
-
 
     .form-group input[type="datetime-local"] {
         -webkit-appearance: none;
@@ -1499,7 +1489,6 @@ h1.page-heading::after {
         line-height: normal;
         text-align: left;
     }
-
 }
    
    
