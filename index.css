@@ -1496,21 +1496,24 @@ WHAT IS THE EXPECTED OUTPUT
     }
 
     .form-group input[type="datetime-local"] {
+    width: 100%;
+    height: 50px;
+    padding: 0 1rem;
+    box-sizing: border-box;
+
+    font-size: 16px; 
+    line-height: normal;
+
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* iPhone Safari */
+@supports (-webkit-touch-callout: none) {
+    .form-group input[type="datetime-local"] {
+        min-height: 50px;
         width: 100%;
         max-width: 100%;
-        min-width: 0;
-
-        height: 50px;
-        padding: 0 1rem;
-
-        box-sizing: border-box;
-        display: block;
-
-        font-size: 16px;
-        line-height: normal;
-
-        -webkit-appearance: none;
-        appearance: none;
     }
 }   
    
