@@ -1332,7 +1332,7 @@ h1.page-heading::after {
 .form-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem 2rem;
+    gap: 1rem 2rem;
 }
 
 .form-group {
@@ -1433,14 +1433,14 @@ h1.page-heading::after {
     display: block;
 }
 
-/* DATETIME INPUT */
+/* DATETIME INPUT - Desktop */
 .form-group input[type="datetime-local"] {
     width: 100%;
     max-width: 100%;
     min-width: 0;
 
     height: 50px;
-    padding: 0 1.25rem;
+    padding: 0 0.75rem 0 1.25rem;
 
     box-sizing: border-box;
     display: block;
@@ -1453,12 +1453,14 @@ h1.page-heading::after {
 
     font-family: var(--font-body);
     font-size: 16px;
-    line-height: normal;
+    line-height: 50px;
 
     transition: all var(--transition-fast);
 
-    -webkit-appearance: none;
-    appearance: none;
+    /* Do NOT use -webkit-appearance: none on desktop — it removes the calendar icon */
+    -webkit-appearance: auto;
+    appearance: auto;
+    cursor: pointer;
 }
 
 /* ==========================================================================
