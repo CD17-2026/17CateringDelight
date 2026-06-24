@@ -392,28 +392,29 @@ h1.page-heading::after {
   cursor: pointer;
 }
 
+
 /* =========================
-   TABLET / iPAD (≤1024px)
+   TABLET / iPAD HEADER (≤1024px)
    ========================= */
 @media screen and (max-width: 1024px) {
 
-  /* Header spacing */
+  /* HEADER SPACING */
   .header-container {
     padding: 0.7rem 2%;
   }
 
-  /* Logo smaller */
+  /* LOGO */
   .brand-logo {
     height: 55px;
     width: 55px;
   }
 
-  /* Brand text smaller */
+  /* BRAND NAME */
   .brand-name {
     font-size: 1.4rem;
   }
 
-  /* NAV MENU becomes tighter */
+  /* NAV MENU (desktop nav) */
   .nav-menu {
     gap: 0.6rem;
   }
@@ -422,7 +423,7 @@ h1.page-heading::after {
     font-size: 0.95rem;
   }
 
-  /* CTA buttons smaller spacing */
+  /* CTA BUTTONS */
   .header-ctas {
     gap: 0.5rem;
   }
@@ -431,6 +432,30 @@ h1.page-heading::after {
   .header-ctas .btn-primary {
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
+  }
+
+  /* =========================
+     NAVIGATION MODE CONTROL
+     ========================= */
+
+  /* HIDE desktop navbar (so no clutter on tablet) */
+  .navbar {
+    display: none;
+  }
+
+  /* SHOW hamburger menu */
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  /* MOBILE OVERLAY READY (same system you already have) */
+  .mobile-nav-overlay {
+    display: flex;
+  }
+
+  /* OPTIONAL: reduce main content offset slightly */
+  .main-content {
+    margin-top: 75px;
   }
 }
 
