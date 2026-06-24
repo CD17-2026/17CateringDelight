@@ -392,6 +392,48 @@ h1.page-heading::after {
   cursor: pointer;
 }
 
+/* =========================
+   TABLET / iPAD (≤1024px)
+   ========================= */
+@media screen and (max-width: 1024px) {
+
+  /* Header spacing */
+  .header-container {
+    padding: 0.7rem 2%;
+  }
+
+  /* Logo smaller */
+  .brand-logo {
+    height: 55px;
+    width: 55px;
+  }
+
+  /* Brand text smaller */
+  .brand-name {
+    font-size: 1.4rem;
+  }
+
+  /* NAV MENU becomes tighter */
+  .nav-menu {
+    gap: 0.6rem;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+  }
+
+  /* CTA buttons smaller spacing */
+  .header-ctas {
+    gap: 0.5rem;
+  }
+
+  .header-ctas .btn,
+  .header-ctas .btn-primary {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
 /* Mobile Overlay Menu */
 .mobile-nav-overlay {
   position: fixed;
