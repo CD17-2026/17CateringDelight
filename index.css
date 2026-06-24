@@ -2148,8 +2148,24 @@ h1.page-heading::after {
    Responsive Media Queries
    ========================================================================== */
 
-/* Tablet Layout (max-width: 992px) */
-@media screen and (max-width: 992px) {
+/* Tablet Layout (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+
+  /* NAVIGATION FIX */
+  .navbar {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-ctas {
+    display: none;
+  }
+
   .section-container {
     padding: 4rem 5%;
   }
@@ -2167,7 +2183,7 @@ h1.page-heading::after {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
   }
-  
+
   .quotation-flow-steps {
     flex-wrap: wrap;
     gap: 2rem 1rem;
