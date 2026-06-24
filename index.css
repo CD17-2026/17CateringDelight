@@ -214,7 +214,7 @@ h1.page-heading::after {
   justify-content: center;
   font-family: var(--font-body);
   font-weight: 600;
-  padding: 0.75rem 0.75rem;
+  padding: 0.75rem 1.25rem;
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -2477,4 +2477,33 @@ h1.page-heading::after {
     .team-grid{
         grid-template-columns:1fr;
     }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1180px) {
+
+  .header-container {
+    padding: 0.6rem 1%;
+  }
+
+  .brand-logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .brand-name {
+    font-size: 1.3rem;
+  }
+
+  .nav-menu {
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+  }
+
+  .header-ctas .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
 }
