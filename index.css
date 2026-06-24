@@ -1467,7 +1467,7 @@ h1.page-heading::after {
    MOBILE RESPONSIVE
    ========================================================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     .booking-form-card {
         padding: 2rem;
