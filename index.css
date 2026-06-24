@@ -1457,14 +1457,13 @@ h1.page-heading::after {
 
     transition: all var(--transition-fast);
 
-    /* Do NOT use -webkit-appearance: none on desktop — it removes the calendar icon */
     -webkit-appearance: auto;
     appearance: auto;
     cursor: pointer;
 }
 
 /* ==========================================================================
-   MOBILE RESPONSIVE
+   MOBILE & TABLET RESPONSIVE
    ========================================================================== */
 
 @media (max-width: 1024px) {
@@ -1478,8 +1477,8 @@ h1.page-heading::after {
     }
 
     .form-group {
-        min-width: 0;
         width: 100%;
+        min-width: 0;
     }
 
     .form-group.full-width {
@@ -1494,7 +1493,7 @@ h1.page-heading::after {
         box-sizing: border-box;
     }
 
-    /* iOS datetime-local fix */
+    /* Date & Time Input */
     .form-group input[type="datetime-local"] {
         -webkit-appearance: none;
         appearance: none;
@@ -1505,28 +1504,21 @@ h1.page-heading::after {
         padding: 0 1rem;
         box-sizing: border-box;
 
-        font-size: 16px; /* Prevents iOS auto-zoom */
+        font-size: 16px;
         font-family: var(--font-body);
         color: var(--text-dark);
         background-color: var(--white);
 
-        border: 1px solid #ccc; /* Match your other inputs */
-        border-radius: 8px;     /* Match your other inputs */
+        border: 1px solid #ccc;
+        border-radius: 8px;
         outline: none;
 
-        line-height: 50px; /* Vertically centers text on iOS */
+        text-align: left;
 
-        /* Prevent iOS from adding inner shadow */
         -webkit-box-shadow: none;
         box-shadow: none;
-
-        /* Ensure the calendar icon doesn't overflow */
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
     }
 
-    /* Fix iOS focus state using your gold color */
     .form-group input[type="datetime-local"]:focus {
         border-color: var(--gold, #C9A84C);
         outline: none;
@@ -1534,16 +1526,20 @@ h1.page-heading::after {
         box-shadow: none;
     }
 
-    /* Fix for iOS date picker icon alignment */
+    /* Safari / iPad Fix */
     .form-group input[type="datetime-local"]::-webkit-date-and-time-value {
-        text-align: left;
-        margin: 0;
-        padding: 0;
-        line-height: 50px;
-        min-height: 50px;
+        text-align: left !important;
     }
 
-    /* Remove inner spin buttons if any */
+    .form-group input[type="datetime-local"]::-webkit-datetime-edit {
+        text-align: left;
+    }
+
+    .form-group input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+        opacity: 1;
+        cursor: pointer;
+    }
+
     .form-group input[type="datetime-local"]::-webkit-inner-spin-button,
     .form-group input[type="datetime-local"]::-webkit-outer-spin-button {
         -webkit-appearance: none;
