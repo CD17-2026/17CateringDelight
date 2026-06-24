@@ -1338,6 +1338,7 @@ h1.page-heading::after {
 .form-group {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .form-group.full-width {
@@ -1356,13 +1357,12 @@ h1.page-heading::after {
     color: var(--error);
 }
 
-/* INPUTS & SELECTS */
+/* INPUTS */
 .form-group input,
 .form-group select {
     width: 100%;
     height: 50px;
     padding: 0 1.25rem;
-    box-sizing: border-box;
 
     border: 1px solid var(--cream-dark);
     border-radius: var(--radius-sm);
@@ -1381,7 +1381,6 @@ h1.page-heading::after {
     width: 100%;
     min-height: 120px;
     padding: 1rem 1.25rem;
-    box-sizing: border-box;
 
     border: 1px solid var(--cream-dark);
     border-radius: var(--radius-sm);
@@ -1393,17 +1392,15 @@ h1.page-heading::after {
     font-size: 16px;
 
     resize: vertical;
-    transition: all var(--transition-fast);
 }
 
-/* PLACEHOLDER TEXT */
+/* PLACEHOLDER */
 .form-group input::placeholder,
 .form-group textarea::placeholder {
     color: #888;
-    font-size: 16px;
 }
 
-/* FOCUS STATE */
+/* FOCUS */
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
@@ -1412,38 +1409,11 @@ h1.page-heading::after {
     box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
 }
 
-/* ERROR STYLES */
-.error-msg {
-    display: none;
-    margin-top: 0.4rem;
-
-    color: var(--error);
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
-.form-group.invalid input,
-.form-group.invalid select,
-.form-group.invalid textarea {
-    border-color: var(--error);
-    background-color: var(--error-light);
-}
-
-.form-group.invalid .error-msg {
-    display: block;
-}
-
-/* DATETIME INPUT - Desktop */
+/* DATETIME INPUT */
 .form-group input[type="datetime-local"] {
     width: 100%;
-    max-width: 100%;
-    min-width: 0;
-
     height: 50px;
-    padding: 0 0.75rem 0 1.25rem;
-
-    box-sizing: border-box;
-    display: block;
+    padding: 0 1rem;
 
     border: 1px solid var(--cream-dark);
     border-radius: var(--radius-sm);
@@ -1453,20 +1423,30 @@ h1.page-heading::after {
 
     font-family: var(--font-body);
     font-size: 16px;
-    line-height: 50px;
 
-    transition: all var(--transition-fast);
+    text-align: left !important;
 
-    -webkit-appearance: auto;
-    appearance: auto;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* iPad / Safari Fix */
+.form-group input[type="datetime-local"]::-webkit-datetime-edit,
+.form-group input[type="datetime-local"]::-webkit-date-and-time-value,
+.form-group input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
+    text-align: left !important;
+}
+
+.form-group input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    opacity: 1;
     cursor: pointer;
 }
 
 /* ==========================================================================
-   MOBILE & TABLET RESPONSIVE
+   TABLET & MOBILE
    ========================================================================== */
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
 
     .booking-form-card {
         padding: 2rem;
@@ -1474,76 +1454,19 @@ h1.page-heading::after {
 
     .form-grid {
         grid-template-columns: 1fr;
-    }
-
-    .form-group {
-        width: 100%;
-        min-width: 0;
+        gap: 1rem;
     }
 
     .form-group.full-width {
         grid-column: span 1;
     }
 
+    .form-group,
     .form-group input,
     .form-group select,
     .form-group textarea {
         width: 100%;
         max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    /* Date & Time Input */
-    .form-group input[type="datetime-local"] {
-        -webkit-appearance: none;
-        appearance: none;
-
-        display: block;
-        width: 100%;
-        height: 50px;
-        padding: 0 1rem;
-        box-sizing: border-box;
-
-        font-size: 16px;
-        font-family: var(--font-body);
-        color: var(--text-dark);
-        background-color: var(--white);
-
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        outline: none;
-
-        text-align: left;
-
-        -webkit-box-shadow: none;
-        box-shadow: none;
-    }
-
-    .form-group input[type="datetime-local"]:focus {
-        border-color: var(--gold, #C9A84C);
-        outline: none;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-    }
-
-    /* Safari / iPad Fix */
-    .form-group input[type="datetime-local"]::-webkit-date-and-time-value {
-        text-align: left !important;
-    }
-
-    .form-group input[type="datetime-local"]::-webkit-datetime-edit {
-        text-align: left;
-    }
-
-    .form-group input[type="datetime-local"]::-webkit-calendar-picker-indicator {
-        opacity: 1;
-        cursor: pointer;
-    }
-
-    .form-group input[type="datetime-local"]::-webkit-inner-spin-button,
-    .form-group input[type="datetime-local"]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
     }
 }   
    
