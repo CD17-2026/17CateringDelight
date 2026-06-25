@@ -2540,7 +2540,6 @@ h1.page-heading::after {
 
 /* =====================================================
    TABLET PORTRAIT (769px - 1180px)
-   Same as Mobile Navigation
 ===================================================== */
 @media screen and (min-width: 769px) and (max-width: 1180px) and (orientation: portrait) {
 
