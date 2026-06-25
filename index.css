@@ -2486,7 +2486,7 @@ h1.page-heading::after {
   .nav-desktop-only  { display: list-item; }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
 
   .header-container {
     padding: 0.6rem 1%;
