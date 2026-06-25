@@ -2474,47 +2474,61 @@ h1.page-heading::after {
     }
 }
 
-/* Desktop: show all links normally, hide tablet dropdown */
-@media screen and (min-width: 1181px) {
-  .nav-more-dropdown { display: none !important; }
-  .nav-desktop-only  { display: list-item; }
-}
+/* =====================================================
+   MOBILE + TABLET PORTRAIT
+   ===================================================== */
+@media screen and (max-width: 1024px) {
 
-/* Tablet / iPad (portrait + landscape) */
-@media screen and (min-width: 769px) and (max-width: 1180px) {
-
-  /* Force navbar visible — overrides the max-width:1024px rule above */
+  /* Header */
   .navbar {
-    display: flex !important;
+    display: none;
+  }
+
+  .btn-header-cta {
+    display: none;
   }
 
   .mobile-nav-toggle {
-    display: none !important;
+    display: block;
   }
 
-  .header-container {
-    padding: 0.6rem 1%;
+  /* Hero */
+  .hero-title {
+    font-size: 2.5rem;
   }
 
-  .brand-logo {
-    width: 55px;
-    height: 55px;
-  }
-
-  .brand-name {
-    font-size: 1.3rem;
-  }
-
-  .nav-menu {
-    gap: 0.5rem;
+  .hero-actions {
+    flex-direction: column;
     align-items: center;
   }
 
-  .nav-link {
-    font-size: 0.85rem;
+  /* All grids become single column */
+  .cols-2,
+  .cols-3,
+  .cols-4,
+  .gallery-grid,
+  .form-grid {
+    grid-template-columns: 1fr !important;
   }
 
-  .header-ctas .btn {
-    padding: 0.6rem 1rem;
-    font-size: 0.85rem;
+  .form-group.full-width {
+    grid-column: span 1;
   }
+
+  /* Package cards */
+  .featured-pack-card,
+  .service-card,
+  .package-detail-card {
+    width: 100%;
+  }
+
+  /* Section spacing */
+  .section-container {
+    padding: 4rem 5%;
+  }
+
+  /* Booking form */
+  .booking-form-card {
+    padding: 2rem;
+  }
+}
