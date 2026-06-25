@@ -2099,9 +2099,6 @@ h1.page-heading::after {
    Responsive Media Queries
    ========================================================================== */
 
-/* ==========================================================================
-   Mobile + Tablet Layout (max-width: 1024px)
-   ========================================================================== */
 @media screen and (max-width: 1024px) {
 
   /* Navigation — tablet shows navbar with dropdown; hamburger hidden */
@@ -2486,7 +2483,7 @@ h1.page-heading::after {
   .nav-desktop-only  { display: list-item; }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1366px) {
 
   .header-container {
     padding: 0.6rem 1%;
