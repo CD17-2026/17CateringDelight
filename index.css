@@ -1477,7 +1477,7 @@ h1.page-heading::after {
    TABLET & MOBILE
    ========================================================================== */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1180px) {
 
     .booking-form-card {
         padding: 2rem;
