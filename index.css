@@ -2101,7 +2101,14 @@ h1.page-heading::after {
 
 @media screen and (max-width: 1024px) {
 
-  /* Navigation — tablet keeps navbar; mobile handled separately below */
+  /* Navigation */
+  .navbar {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: block !important;
+  }
 
   h1.page-heading {
     font-size: 2.25rem;
@@ -2253,18 +2260,13 @@ h1.page-heading::after {
     font-size: 1.85rem;
   }
 
-  /* Mobile only: hide navbar, show hamburger */
   .navbar {
-    display: none !important;
+    display: none;
   }
 
   .mobile-nav-toggle {
-    display: block !important;
+    display: block;
   }
-
-  /* Also hide tablet-specific nav items on mobile */
-  .nav-more-dropdown { display: none !important; }
-  .nav-desktop-only  { display: none !important; }
 
   .hero-title {
     font-size: 2.5rem;
