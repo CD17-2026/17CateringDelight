@@ -2539,7 +2539,7 @@ h1.page-heading::after {
 }
 
 /* =====================================================
-   TABLET PORTRAIT (769px - 1180px)
+TABLET PORTRAIT (769px - 1180px)
 ===================================================== */
 @media screen and (min-width: 769px) and (max-width: 1180px) and (orientation: portrait) {
 
@@ -2548,17 +2548,16 @@ h1.page-heading::after {
         display: none !important;
     }
 
-    /* Show hamburger button */
+    /* Show hamburger */
     .mobile-nav-toggle {
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
+        display: block !important;
+        position: relative;
+        z-index: 9999;
         font-size: 2rem;
-        color: #ffffff;
-        background: transparent;
+        color: #fff;
+        background: none;
         border: none;
         cursor: pointer;
-        z-index: 1200;
     }
 
     /* Hide CTA buttons */
@@ -2566,12 +2565,9 @@ h1.page-heading::after {
         display: none !important;
     }
 
-    /* Header layout */
+    /* Header */
     .header-container {
         padding: 0.8rem 1rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 
     /* Logo */
@@ -2582,10 +2578,5 @@ h1.page-heading::after {
 
     .brand-name {
         font-size: 1.4rem;
-    }
-
-    /* Ensure overlay menu works */
-    .mobile-nav-overlay {
-        display: flex;
     }
 }
