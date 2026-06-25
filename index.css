@@ -2483,6 +2483,7 @@ h1.page-heading::after {
     /* Keep navbar visible */
     .navbar {
         display: flex !important;
+        align-items: center;
     }
 
     /* Hide hamburger */
@@ -2490,39 +2491,50 @@ h1.page-heading::after {
         display: none !important;
     }
 
-    /* Header size */
+    /* Header layout */
     .header-container {
         padding: 0.45rem 1%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     /* Logo */
     .brand-logo {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
     }
 
     .brand-name {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
+        white-space: nowrap;
     }
 
     /* Navigation */
     .nav-menu {
-        gap: 0.65rem;
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+        flex-wrap: nowrap;
     }
 
     .nav-link {
-        font-size: 0.88rem;
+        font-size: 0.80rem;
         padding: 0.25rem 0;
+        white-space: nowrap;
     }
 
-    /* Book Now button */
+    /* Header buttons */
     .header-ctas {
-        gap: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
     }
 
     .header-ctas .btn {
-        padding: 0.5rem 0.85rem;
-        font-size: 0.82rem;
+        padding: 0.45rem 0.75rem;
+        font-size: 0.75rem;
+        white-space: nowrap;
     }
 }
 
