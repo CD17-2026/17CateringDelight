@@ -2099,12 +2099,12 @@ h1.page-heading::after {
    Responsive Media Queries
    ========================================================================== */
 
+/* ==========================================================================
+   Mobile + Tablet Layout (max-width: 1024px)
+   ========================================================================== */
 @media screen and (max-width: 1024px) {
 
-  /* Navigation — tablet shows navbar with dropdown; hamburger hidden */
-  .mobile-nav-toggle {
-    display: none !important;
-  }
+  /* Navigation — tablet keeps navbar; mobile handled separately below */
 
   h1.page-heading {
     font-size: 2.25rem;
@@ -2246,12 +2246,8 @@ h1.page-heading::after {
 }
 
 
-/* Mobile Portrait Layout (max-width: 767px) */
-@media screen and (max-width: 767px) {
-  /* Hide tablet dropdown items on mobile */
-  .nav-more-dropdown { display: none !important; }
-  .nav-desktop-only  { display: none !important; }
-
+/* Mobile Portrait Layout (max-width: 768px) */
+@media screen and (max-width: 768px) {
   h1.page-heading {
     font-size: 2.25rem;
   }
@@ -2260,7 +2256,7 @@ h1.page-heading::after {
     font-size: 1.85rem;
   }
 
-  /* Hide navbar on mobile — use hamburger overlay instead */
+  /* Mobile only: hide navbar, show hamburger */
   .navbar {
     display: none !important;
   }
@@ -2268,6 +2264,10 @@ h1.page-heading::after {
   .mobile-nav-toggle {
     display: block !important;
   }
+
+  /* Also hide tablet-specific nav items on mobile */
+  .nav-more-dropdown { display: none !important; }
+  .nav-desktop-only  { display: none !important; }
 
   .hero-title {
     font-size: 2.5rem;
@@ -2477,13 +2477,23 @@ h1.page-heading::after {
     }
 }
 
-/* Desktop: show all links normally, hide the tablet dropdown item */
-@media screen and (min-width: 1025px) {
+/* Desktop: show all links normally, hide tablet dropdown */
+@media screen and (min-width: 1181px) {
   .nav-more-dropdown { display: none !important; }
   .nav-desktop-only  { display: list-item; }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+/* Tablet / iPad (portrait + landscape): 768px–1180px */
+@media screen and (min-width: 769px) and (max-width: 1180px) {
+
+  /* Force navbar visible — overrides the max-width:1024px rule above */
+  .navbar {
+    display: flex !important;
+  }
+
+  .mobile-nav-toggle {
+    display: none !important;
+  }
 
   .header-container {
     padding: 0.6rem 1%;
@@ -2500,6 +2510,7 @@ h1.page-heading::after {
 
   .nav-menu {
     gap: 0.5rem;
+    align-items: center;
   }
 
   .nav-link {
@@ -2511,15 +2522,20 @@ h1.page-heading::after {
     font-size: 0.85rem;
   }
 
-  /* --- "Book Event ▾" dropdown item --- */
+  /* --- "Book Event ▾" dropdown --- */
   .nav-desktop-only  { display: none !important; }
-  .nav-more-dropdown { display: list-item; position: relative; }
+  .nav-more-dropdown {
+    display: flex !important;
+    align-items: center;
+    position: relative;
+  }
 
-  /* Button inherits nav-link appearance */
+  /* Button styled to match nav-link */
   .nav-more-btn {
     background: none;
     border: none;
     padding: 0.30rem 0;
+    margin: 0;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -2531,10 +2547,13 @@ h1.page-heading::after {
     position: relative;
     white-space: nowrap;
     transition: color var(--transition-fast);
+    vertical-align: middle;
+    line-height: 1;
   }
 
   .nav-more-btn:hover,
-  .nav-more-btn[aria-expanded="true"] {
+  .nav-more-btn[aria-expanded="true"],
+  .nav-more-dropdown:hover .nav-more-btn {
     color: var(--gold-main);
   }
 
@@ -2551,7 +2570,8 @@ h1.page-heading::after {
   }
 
   .nav-more-btn:hover::after,
-  .nav-more-btn[aria-expanded="true"]::after {
+  .nav-more-btn[aria-expanded="true"]::after,
+  .nav-more-dropdown:hover .nav-more-btn::after {
     width: 100%;
   }
 
@@ -2561,7 +2581,16 @@ h1.page-heading::after {
     text-decoration: none;
   }
 
- 
+  /* Chevron */
+  .nav-more-icon {
+    font-size: 0.65em;
+    transition: transform 0.25s ease;
+  }
+
+  .nav-more-btn[aria-expanded="true"] .nav-more-icon,
+  .nav-more-dropdown:hover .nav-more-icon {
+    transform: rotate(180deg);
+  }
 
   /* Dropdown panel */
   .nav-more-menu {
@@ -2580,7 +2609,9 @@ h1.page-heading::after {
     backdrop-filter: blur(8px);
   }
 
-  .nav-more-menu.is-open {
+  /* Open on hover (mouse) or .is-open (JS tap) */
+  .nav-more-menu.is-open,
+  .nav-more-dropdown:hover .nav-more-menu {
     display: block;
     animation: dropFadeIn 0.2s ease;
   }
