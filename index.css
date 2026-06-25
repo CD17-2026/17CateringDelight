@@ -2539,96 +2539,132 @@ h1.page-heading::after {
     }
 }
 
-/* =====================================================
-   MOBILE + TABLET PORTRAIT NAVIGATION
-   ===================================================== */
+/* ===============================
+   MOBILE HAMBURGER MENU FIX
+================================ */
 
-@media screen and (max-width: 1024px) {
 
-  /* Hide desktop navigation */
-  .navbar {
-    display: none !important;
-  }
+.mobile-nav-toggle {
 
-  /* Show hamburger menu */
-  .mobile-nav-toggle {
-    display: block !important;
+    display: none;
     background: none;
     border: none;
-    color: var(--white);
-    font-size: 2rem;
+    color: white;
+    font-size: 1.8rem;
     cursor: pointer;
-  }
 
-  /* Hide desktop CTA buttons */
-  .header-ctas,
-  .nav-more-dropdown,
-  .nav-desktop-only {
-    display: none !important;
-  }
+}
 
-  /* Header */
-  .header-container {
-    padding: 0.8rem 3%;
-  }
 
-  .brand-logo {
-    width: 60px;
-    height: 60px;
-  }
 
-  .brand-name {
-    font-size: 1.5rem;
-  }
+.mobile-nav-overlay {
 
-  /* Mobile overlay menu */
-  .mobile-nav-overlay {
     position: fixed;
     top: 0;
     left: -100%;
+
     width: 100%;
     height: 100vh;
-    background: var(--charcoal);
-    z-index: 1100;
+
+    background-color: var(--charcoal);
+
+    z-index: 9999;
+
     padding: 2rem;
+
     transition: left 0.4s ease;
-    display: flex;
-    flex-direction: column;
-  }
 
-  .mobile-nav-overlay.open {
-    left: 0;
-  }
-
-  .mobile-overlay-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 3rem;
-  }
-
-  .mobile-close-btn {
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 2rem;
-    cursor: pointer;
-  }
-
-  .mobile-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .mobile-link {
-    color: var(--white);
-    font-size: 1.5rem;
-    font-family: var(--font-title);
-  }
-
-  .mobile-link:hover {
-    color: var(--gold-main);
-  }
 }
 
+
+
+.mobile-nav-overlay.open {
+
+    left: 0;
+
+}
+
+
+
+.mobile-overlay-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+
+.mobile-close-btn {
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+
+}
+
+
+
+.mobile-menu {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin-top: 3rem;
+
+}
+
+
+
+.mobile-link {
+
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 1.2rem;
+
+    padding: 1rem 0;
+
+}
+
+
+
+
+@media (max-width:1024px){
+
+
+    .navbar {
+
+        display:none;
+
+    }
+
+
+    .btn-header-cta {
+
+        display:none;
+
+    }
+
+
+    .mobile-nav-toggle {
+
+        display:block !important;
+
+    }
+
+
+}
