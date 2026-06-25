@@ -2539,44 +2539,94 @@ h1.page-heading::after {
 }
 
 /* =====================================================
-TABLET PORTRAIT (769px - 1180px)
-===================================================== */
-@media screen and (min-width: 769px) and (max-width: 1180px) and (orientation: portrait) {
+   MOBILE + TABLET PORTRAIT NAVIGATION
+   ===================================================== */
 
-    /* Hide desktop navbar */
-    .navbar {
-        display: none !important;
-    }
+@media screen and (max-width: 1024px) {
 
-    /* Show hamburger */
-    .mobile-nav-toggle {
-        display: block !important;
-        position: relative;
-        z-index: 9999;
-        font-size: 2rem;
-        color: #fff;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
+  /* Hide desktop navigation */
+  .navbar {
+    display: none !important;
+  }
 
-    /* Hide CTA buttons */
-    .header-ctas {
-        display: none !important;
-    }
+  /* Show hamburger menu */
+  .mobile-nav-toggle {
+    display: block !important;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+  }
 
-    /* Header */
-    .header-container {
-        padding: 0.8rem 1rem;
-    }
+  /* Hide desktop CTA buttons */
+  .header-ctas,
+  .nav-more-dropdown,
+  .nav-desktop-only {
+    display: none !important;
+  }
 
-    /* Logo */
-    .brand-logo {
-        width: 60px;
-        height: 60px;
-    }
+  /* Header */
+  .header-container {
+    padding: 0.8rem 3%;
+  }
 
-    .brand-name {
-        font-size: 1.4rem;
-    }
+  .brand-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+  }
+
+  /* Mobile overlay menu */
+  .mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: var(--charcoal);
+    z-index: 1100;
+    padding: 2rem;
+    transition: left 0.4s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-nav-overlay.open {
+    left: 0;
+  }
+
+  .mobile-overlay-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  .mobile-close-btn {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .mobile-link {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-family: var(--font-title);
+  }
+
+  .mobile-link:hover {
+    color: var(--gold-main);
+  }
 }
