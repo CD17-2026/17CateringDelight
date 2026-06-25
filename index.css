@@ -2474,61 +2474,96 @@ h1.page-heading::after {
     }
 }
 
+
 /* =====================================================
-   MOBILE + TABLET PORTRAIT
+   MOBILE + TABLET PORTRAIT NAVIGATION
    ===================================================== */
+
 @media screen and (max-width: 1024px) {
 
-  /* Header */
+  /* Hide desktop navigation */
   .navbar {
-    display: none;
+    display: none !important;
   }
 
-  .btn-header-cta {
-    display: none;
-  }
-
+  /* Show hamburger menu */
   .mobile-nav-toggle {
-    display: block;
+    display: block !important;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
   }
 
-  /* Hero */
-  .hero-title {
-    font-size: 2.5rem;
+  /* Hide desktop CTA buttons */
+  .header-ctas,
+  .nav-more-dropdown,
+  .nav-desktop-only {
+    display: none !important;
   }
 
-  .hero-actions {
-    flex-direction: column;
-    align-items: center;
+  /* Header */
+  .header-container {
+    padding: 0.8rem 3%;
   }
 
-  /* All grids become single column */
-  .cols-2,
-  .cols-3,
-  .cols-4,
-  .gallery-grid,
-  .form-grid {
-    grid-template-columns: 1fr !important;
+  .brand-logo {
+    width: 60px;
+    height: 60px;
   }
 
-  .form-group.full-width {
-    grid-column: span 1;
+  .brand-name {
+    font-size: 1.5rem;
   }
 
-  /* Package cards */
-  .featured-pack-card,
-  .service-card,
-  .package-detail-card {
+  /* Mobile overlay menu */
+  .mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: -100%;
     width: 100%;
-  }
-
-  /* Section spacing */
-  .section-container {
-    padding: 4rem 5%;
-  }
-
-  /* Booking form */
-  .booking-form-card {
+    height: 100vh;
+    background: var(--charcoal);
+    z-index: 1100;
     padding: 2rem;
+    transition: left 0.4s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-nav-overlay.open {
+    left: 0;
+  }
+
+  .mobile-overlay-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  .mobile-close-btn {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .mobile-link {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-family: var(--font-title);
+  }
+
+  .mobile-link:hover {
+    color: var(--gold-main);
   }
 }
