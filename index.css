@@ -2539,27 +2539,43 @@ h1.page-heading::after {
 }
 
 /* =====================================================
-TABLET PORTRAIT
-(769px - 1180px)
+   TABLET PORTRAIT (769px - 1180px)
+   Same as Mobile Navigation
 ===================================================== */
 @media screen and (min-width: 769px) and (max-width: 1180px) and (orientation: portrait) {
 
+    /* Hide desktop navbar */
     .navbar {
         display: none !important;
     }
 
+    /* Show hamburger button */
     .mobile-nav-toggle {
-        display: block !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: #ffffff;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1200;
     }
 
+    /* Hide CTA buttons */
     .header-ctas {
         display: none !important;
     }
 
+    /* Header layout */
     .header-container {
         padding: 0.8rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
+    /* Logo */
     .brand-logo {
         width: 60px;
         height: 60px;
@@ -2567,5 +2583,10 @@ TABLET PORTRAIT
 
     .brand-name {
         font-size: 1.4rem;
+    }
+
+    /* Ensure overlay menu works */
+    .mobile-nav-overlay {
+        display: flex;
     }
 }
