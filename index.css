@@ -368,7 +368,7 @@ h1.page-heading::after {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 2.5px;
   background-color: var(--gold-main);
   transition: width var(--transition-fast);
 }
@@ -2483,7 +2483,7 @@ h1.page-heading::after {
   .nav-desktop-only  { display: list-item; }
 }
 
-/* Tablet / iPad (portrait + landscape): 768px–1180px */
+/* Tablet / iPad (portrait + landscape) */
 @media screen and (min-width: 769px) and (max-width: 1180px) {
 
   /* Force navbar visible — overrides the max-width:1024px rule above */
@@ -2522,7 +2522,7 @@ h1.page-heading::after {
     font-size: 0.85rem;
   }
 
-  /* --- "Book Event ▾" dropdown --- */
+  /* --- "Book Event" dropdown menu --- */
   .nav-desktop-only  { display: none !important; }
   .nav-more-dropdown {
     display: flex !important;
@@ -2557,7 +2557,7 @@ h1.page-heading::after {
     color: var(--gold-main);
   }
 
-  /* Underline effect matching .nav-link::after */
+  /* Underline effect */
   .nav-more-btn::after {
     content: '';
     position: absolute;
@@ -2609,7 +2609,7 @@ h1.page-heading::after {
     backdrop-filter: blur(8px);
   }
 
-  /* Open on hover (mouse) or .is-open (JS tap) */
+  /* Open on hover (mouse)*/
   .nav-more-menu.is-open,
   .nav-more-dropdown:hover .nav-more-menu {
     display: block;
