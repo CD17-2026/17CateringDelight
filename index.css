@@ -214,7 +214,7 @@ h1.page-heading::after {
   justify-content: center;
   font-family: var(--font-body);
   font-weight: 600;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1.75rem;
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -368,7 +368,7 @@ h1.page-heading::after {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2.5px;
+  height: 2px;
   background-color: var(--gold-main);
   transition: width var(--transition-fast);
 }
@@ -391,6 +391,7 @@ h1.page-heading::after {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
 
 /* Mobile Overlay Menu */
 .mobile-nav-overlay {
@@ -1477,7 +1478,7 @@ h1.page-heading::after {
    TABLET & MOBILE
    ========================================================================== */
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1024px) {
 
     .booking-form-card {
         padding: 2rem;
@@ -2473,69 +2474,6 @@ h1.page-heading::after {
 @media(max-width:768px){
     .team-grid{
         grid-template-columns:1fr;
-    }
-}
-
-/* =====================================================
-   TABLET NAVBAR (769px - 1180px)
-===================================================== */
-@media screen and (min-width: 769px) and (max-width: 1180px) {
-
-    /* Keep navbar visible */
-    .navbar {
-        display: flex !important;
-        align-items: center;
-    }
-
-    /* Hide hamburger */
-    .mobile-nav-toggle {
-        display: none !important;
-    }
-
-    /* Header layout */
-    .header-container {
-        padding: 0.45rem 1%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    /* Logo */
-    .brand-logo {
-        width: 45px;
-        height: 45px;
-    }
-
-    .brand-name {
-        font-size: 1.1rem;
-        white-space: nowrap;
-    }
-
-    /* Navigation */
-    .nav-menu {
-        display: flex;
-        align-items: center;
-        gap: 0.45rem;
-        flex-wrap: nowrap;
-    }
-
-    .nav-link {
-        font-size: 0.80rem;
-        padding: 0.25rem 0;
-        white-space: nowrap;
-    }
-
-    /* Header buttons */
-    .header-ctas {
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
-    }
-
-    .header-ctas .btn {
-        padding: 0.45rem 0.75rem;
-        font-size: 0.75rem;
-        white-space: nowrap;
     }
 }
 
