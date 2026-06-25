@@ -45,42 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==========================================================================
-  // TABLET NAV: "Book Event ▾" Dropdown (768px–1024px only)
-  // ==========================================================================
-  const tabletDropdownToggle = document.getElementById('nav-more-toggle');
-  const tabletDropdownMenu   = document.getElementById('nav-more-menu');
-
-  if (tabletDropdownToggle && tabletDropdownMenu) {
-
-    // Toggle open/close when clicking the chevron button
-    tabletDropdownToggle.addEventListener('click', function (e) {
-      e.stopPropagation();
-      const isOpen = tabletDropdownMenu.classList.toggle('is-open');
-      tabletDropdownToggle.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    // Close when clicking anywhere outside the dropdown
-    document.addEventListener('click', function (e) {
-      if (!tabletDropdownToggle.contains(e.target) && !tabletDropdownMenu.contains(e.target)) {
-        tabletDropdownMenu.classList.remove('is-open');
-        tabletDropdownToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // Close on Escape key
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        tabletDropdownMenu.classList.remove('is-open');
-        tabletDropdownToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // Also highlight active state for dropdown links
-    highlightActiveLink(document.querySelectorAll('.nav-more-link'));
-  }
-
-
+  
   // ==========================================================================
   // 2. DEEP LINK QUERY PARAMS PARSER (Pre-fill Booking Form)
   // ==========================================================================
