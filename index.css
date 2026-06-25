@@ -2493,8 +2493,6 @@ h1.page-heading::after {
 
 }
 
-
-
 .mobile-nav-overlay {
 
     position: fixed;
@@ -2514,14 +2512,11 @@ h1.page-heading::after {
 
 }
 
-
-
 .mobile-nav-overlay.open {
 
     left: 0;
 
 }
-
 
 
 .mobile-overlay-header {
@@ -2533,8 +2528,6 @@ h1.page-heading::after {
     align-items: center;
 
 }
-
-
 
 .mobile-close-btn {
 
@@ -2549,8 +2542,6 @@ h1.page-heading::after {
     cursor: pointer;
 
 }
-
-
 
 .mobile-menu {
 
