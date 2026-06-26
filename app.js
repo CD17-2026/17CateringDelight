@@ -34,9 +34,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Mobile menu triggers - hamburger toggles open/closed, outside click closes
   if (mobileToggle && mobileOverlay) {
+    const toggleIcon = mobileToggle.querySelector('i');
+
+    function openMobileMenu() {
+      mobileOverlay.classList.add('open');
+      mobileToggle.classList.add('active');
+      if (toggleIcon) {
+        toggleIcon.classList.remove('fa-bars');
+        toggleIcon.classList.add('fa-xmark');
+      }
+    }
+
+    function closeMobileMenu() {
+      mobileOverlay.classList.remove('open');
+      mobileToggle.classList.remove('active');
+      if (toggleIcon) {
+        toggleIcon.classList.remove('fa-xmark');
+        toggleIcon.classList.add('fa-bars');
+      }
+    }
+
     mobileToggle.addEventListener('click', (e) => {
       e.stopPropagation();
-      mobileOverlay.classList.toggle('open');
+      if (mobileOverlay.classList.contains('open')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
     });
 
     document.addEventListener('click', (e) => {
@@ -45,14 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
         !mobileOverlay.contains(e.target) &&
         !mobileToggle.contains(e.target)
       ) {
-        mobileOverlay.classList.remove('open');
+        closeMobileMenu();
       }
     });
 
     // Close menu when a nav link inside it is clicked
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
-        mobileOverlay.classList.remove('open');
+        closeMobileMenu();
       });
     });
   }
