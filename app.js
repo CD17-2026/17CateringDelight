@@ -32,16 +32,28 @@ document.addEventListener('DOMContentLoaded', () => {
   highlightActiveLink(navLinks);
   highlightActiveLink(mobileLinks);
 
-  // Mobile menu triggers
+  // Mobile menu triggers - hamburger toggles open/closed, outside click closes
   if (mobileToggle && mobileOverlay) {
-    mobileToggle.addEventListener('click', () => {
-      mobileOverlay.classList.add('open');
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      mobileOverlay.classList.toggle('open');
     });
-  }
 
-  if (mobileClose && mobileOverlay) {
-    mobileClose.addEventListener('click', () => {
-      mobileOverlay.classList.remove('open');
+    document.addEventListener('click', (e) => {
+      if (
+        mobileOverlay.classList.contains('open') &&
+        !mobileOverlay.contains(e.target) &&
+        !mobileToggle.contains(e.target)
+      ) {
+        mobileOverlay.classList.remove('open');
+      }
+    });
+
+    // Close menu when a nav link inside it is clicked
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileOverlay.classList.remove('open');
+      });
     });
   }
 
