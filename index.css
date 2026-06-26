@@ -2587,11 +2587,44 @@ h1.page-heading::after {
         display: none;
     }
 
-    /* Keep "Book Now" button visible on tablet — only hide nav links */
-    /* .btn-header-cta is intentionally NOT hidden here */
+    /* Book Now stays visible on tablet portrait */
 
     .mobile-nav-toggle {
         display: block !important;
     }
 
+}
+
+/* ==========================================================================
+   iPad Landscape — shrink navbar to fit on one line
+   Targets: 1025px–1366px wide AND landscape orientation
+   ========================================================================== */
+@media screen and (min-width: 1025px) and (max-width: 1366px) and (orientation: landscape) {
+
+  .header-container {
+    padding: 0.5rem 1%;
+  }
+
+  .brand-logo {
+    height: 44px;
+    width: 44px;
+  }
+
+  .brand-name {
+    font-size: 1.2rem;
+  }
+
+  .nav-menu {
+    gap: 0.35rem;
+  }
+
+  .nav-link {
+    font-size: 0.78rem;
+    padding: 0.4rem 0;
+  }
+
+  .btn-header-cta {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
 }
