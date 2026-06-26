@@ -2493,13 +2493,13 @@ h1.page-heading::after {
 
 .mobile-nav-overlay {
     position: fixed;
-    top: var(--header-height, 95px); /* adjust to match your actual header height */
+    top: var(--header-height, 90px);
     left: 0;
     width: 100%;
     height: 0;
     overflow: hidden;
     background-color: var(--charcoal);
-    z-index: 9999;
+    z-index: 999;
     padding: 0 3rem;
     transition: height 0.4s ease, padding 0.4s ease;
 }
