@@ -19,6 +19,9 @@
   --text-dark: #2A2425;
   --text-light: #E0D9DA;
   --text-gray: #7F7476;
+
+  /* Layout */
+  --header-height: 97px; /* matches .main-header's real rendered height (logo 70px + 0.8rem top/bottom padding + 1px border) */
   
   /* Status Colors */
   --success: #2E7D32;
@@ -446,7 +449,7 @@ h1.page-heading::after {
 
 /* Page Section Switching Shell */
 .main-content {
-  margin-top: 80px; /* Offset for fixed header */
+  margin-top: var(--header-height); /* Offset for fixed header */
   flex: 1;
 }
 
@@ -459,7 +462,7 @@ h1.page-heading::after {
    1. Homepage Section Styling
    ========================================================================== */
 .hero-banner {
-  height: calc(90vh - 80px);
+  height: calc(90vh - var(--header-height));
   min-height: 550px;
   position: relative;
   background-image: url('assets/wedding_banquet.png');
@@ -1945,7 +1948,7 @@ h1.page-heading::after {
   margin: 0 auto;
   padding: 5rem 5% 3rem 5%;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr);
   gap: 3rem;
 }
 
@@ -2028,6 +2031,7 @@ h1.page-heading::after {
 
 .newsletter-form input {
   flex: 1;
+  min-width: 0;
   background-color: var(--charcoal-light);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0.8rem 1rem;
@@ -2481,90 +2485,128 @@ h1.page-heading::after {
    MOBILE HAMBURGER MENU FIX
 ================================ */
 
+
 .mobile-nav-toggle {
+
     display: none;
     background: none;
     border: none;
-    color: grey;
+    color: white;
     font-size: 1.8rem;
     cursor: pointer;
+
 }
+
 
 
 .mobile-nav-overlay {
+
     position: fixed;
-    top: var(--header-height, 90px);
-    left: 0;
+    top: 0;
+    left: -100%;
+
     width: 100%;
-    height: 0;
-    overflow: hidden;
+    height: 100vh;
+
     background-color: var(--charcoal);
-    z-index: 999;
-    padding: 0 3rem;
-    transition: height 0.4s ease, padding 0.4s ease;
+
+    z-index: 9999;
+
+    padding: 2rem;
+
+    transition: left 0.4s ease;
+
 }
 
+
+
 .mobile-nav-overlay.open {
-    height: calc(100vh - var(--header-height, 95px));
-    padding: 3rem;
-    overflow-y: auto;
+
+    left: 0;
+
 }
+
+
+
+.mobile-overlay-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+
+.mobile-close-btn {
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+
+}
+
 
 
 .mobile-menu {
+
     list-style: none;
+
     padding: 0;
-    margin-top: 0;
+
+    margin-top: 3rem;
+
 }
+
+
 
 .mobile-link {
+
     display: block;
+
     color: white;
+
     text-decoration: none;
+
     font-size: 1.2rem;
-    padding: 0rem 0;
+
+    padding: 1rem 0;
+
 }
+
+
+
 
 @media (max-width:1024px){
+
+
     .navbar {
-        display: none;
+
+        display:none;
+
     }
+
+
+    .btn-header-cta {
+
+        display:none;
+
+    }
+
+
     .mobile-nav-toggle {
-        display: block !important;
+
+        display:block !important;
+
     }
-}
 
 
-/* ==========================================================================
-   iPad Landscape — shrink navbar to fit on one line
-   Targets: 1025px–1366px wide AND landscape orientation
-   ========================================================================== */
-@media screen and (min-width: 1025px) and (max-width: 1366px) and (orientation: landscape) {
-
-  .header-container {
-    padding: 0.5rem 1%;
-  }
-
-  .brand-logo {
-    height: 44px;
-    width: 44px;
-  }
-
-  .brand-name {
-    font-size: 1.2rem;
-  }
-
-  .nav-menu {
-    gap: 0.35rem;
-  }
-
-  .nav-link {
-    font-size: 0.78rem;
-    padding: 0.4rem 0;
-  }
-
-  .btn-header-cta {
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-  }
 }
