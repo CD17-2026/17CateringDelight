@@ -2106,26 +2106,17 @@ h1.page-heading::after {
 
 /* Tablet landscape: shrink nav so it fits on one line before switching to hamburger at 1024px */
 @media screen and (min-width: 1025px) and (max-width: 1366px) {
-  .brand-logo {
-    height: 50px;
-    width: 50px;
-  }
-
-  .brand-name {
-    font-size: 1.3rem;
-  }
-
   .nav-menu {
-    gap: 0.6rem;
+    gap: 0.5rem;
   }
 
   .nav-link {
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     white-space: nowrap;
   }
 
   .header-ctas {
-    gap: 0.6rem;
+    gap: 0.5rem;
   }
 
   .header-ctas .btn {
