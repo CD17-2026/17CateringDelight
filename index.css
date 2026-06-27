@@ -2532,9 +2532,9 @@ h1.page-heading::after {
 
     background-color: var(--charcoal);
 
-    z-index: 9999;
+    z-index: 999;
 
-    padding: 2rem;
+    padding: 3rem;
 
     transition: left 0.4s ease;
 
@@ -2584,7 +2584,7 @@ h1.page-heading::after {
 
     padding: 0;
 
-    margin-top: 3rem;
+    margin-top: 4rem;
 
 }
 
@@ -2600,7 +2600,7 @@ h1.page-heading::after {
 
     font-size: 1.2rem;
 
-    padding: 1rem 0;
+    padding: 0rem 0;
 
 }
 
