@@ -53,7 +53,7 @@
 }
 
 /* Reset and Global Settings */
-* {
+ {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1326,7 +1326,6 @@ h1.page-heading::after {
 /* ==========================================================================
    6. Event Booking Page (Forms Layout)
    ========================================================================== */
-
 /* FORM CARD */
 .booking-form-card {
     padding: 4rem;
@@ -1417,7 +1416,6 @@ h1.page-heading::after {
 /* ==========================================
    FORM VALIDATION
    ========================================== */
-
 .error-msg {
     display: none !important;
     color: #dc3545;
@@ -1480,7 +1478,6 @@ h1.page-heading::after {
 /* ==========================================================================
    TABLET & MOBILE
    ========================================================================== */
-
 @media screen and (max-width: 1024px) {
 
     .booking-form-card {
@@ -1819,7 +1816,6 @@ h1.page-heading::after {
 /* ==========================================================================
    10. Contact Us Styling
    ========================================================================== */
-
 .map-container iframe {
     width: 100%;
     max-width: 100%;
@@ -2447,7 +2443,6 @@ h1.page-heading::after {
 /* ==========================
    TEAM SECTION
 ========================== */
-
 .team-grid{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
@@ -2506,129 +2501,67 @@ h1.page-heading::after {
 /* ===============================
    MOBILE HAMBURGER MENU FIX
 ================================ */
-
-
 .mobile-nav-toggle {
-
     display: none;
     background: none;
     border: none;
     color: white;
     font-size: 1.8rem;
     cursor: pointer;
-
 }
 
-
-
 .mobile-nav-overlay {
-
     position: fixed;
     top: 0;
     left: -100%;
-
     width: 100%;
     height: 100vh;
-
     background-color: var(--charcoal);
-
     z-index: 999;
-
     padding: 3rem;
-
     transition: left 0.4s ease;
-
 }
-
-
 
 .mobile-nav-overlay.open {
-
     left: 0;
-
 }
-
-
 
 .mobile-overlay-header {
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
 }
-
-
 
 .mobile-close-btn {
-
     background: none;
-
     border: none;
-
     color: white;
-
     font-size: 2rem;
-
     cursor: pointer;
-
 }
-
-
 
 .mobile-menu {
-
     list-style: none;
-
     padding: 0;
-
     margin-top: 6rem;
-
 }
-
-
 
 .mobile-link {
-
     display: block;
-
     color: white;
-
     text-decoration: none;
-
     font-size: 1.2rem;
-
     padding: 0rem 0;
-
 }
 
-
-
-
 @media (max-width:1024px){
-
-
     .navbar {
-
-        display:none;
-
-    }
-
-
+    display:none;
+}
     .btn-header-cta {
-
-        display:none;
-
-    }
-
-
+    display:none;
+}
     .mobile-nav-toggle {
-
-        display:block !important;
-
-    }
-
-
+    display:block !important;
+}
 }
