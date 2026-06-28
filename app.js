@@ -172,24 +172,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ==========================================================================
-// 5. GALLERY CATEGORY FILTERING & LIGHTBOX
-// ==========================================================================
+  // 5. GALLERY CATEGORY FILTERING & LIGHTBOX
+  // ==========================================================================
 
-const filterBtns = document.querySelectorAll('.gallery-filter-btn');
-const galleryItems = document.querySelectorAll('.gallery-item');
+  const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
 
-const lightbox = document.getElementById('gallery-lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const lightboxTitle = document.getElementById('lightbox-title');
-const lightboxDesc = document.getElementById('lightbox-desc');
+  const lightbox = document.getElementById('gallery-lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxTitle = document.getElementById('lightbox-title');
+  const lightboxDesc = document.getElementById('lightbox-desc');
 
-const lightboxClose = document.getElementById('lightbox-close');
-const lightboxPrev = document.getElementById('lightbox-prev');
-const lightboxNext = document.getElementById('lightbox-next');
+  const lightboxClose = document.getElementById('lightbox-close');
+  const lightboxPrev = document.getElementById('lightbox-prev');
+  const lightboxNext = document.getElementById('lightbox-next');
 
-if (galleryItems.length > 0) {
-
-    let currentImageIndex = 0;
+  if (galleryItems.length > 0) {
+   let currentImageIndex = 0;
 
     // ==========================
     // Gallery Filter
@@ -197,39 +196,30 @@ if (galleryItems.length > 0) {
     filterBtns.forEach(btn => {
 
         btn.addEventListener('click', function () {
-
             filterBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
 
             const filterVal = this.dataset.filter;
-
             galleryItems.forEach(item => {
 
                 const category = item.dataset.category;
-
                 if (filterVal === 'all' || category === filterVal) {
                     item.style.display = 'block';
                 } else {
                     item.style.display = 'none';
                 }
-
             });
-
         });
-
     });
 
     // ==========================
     // Open Lightbox
     // ==========================
     galleryItems.forEach(item => {
-
         item.addEventListener('click', () => {
 
             const images = JSON.parse(item.dataset.images || '[]');
-
             currentImageIndex = 0;
-
             if (images.length > 0) {
                 lightboxImg.src = images[0];
             } else {
@@ -243,30 +233,23 @@ if (galleryItems.length > 0) {
 
             lightbox.classList.add('open');
             document.body.style.overflow = 'hidden';
-
         });
-
     });
 
     // ==========================
     // Previous / Next
     // ==========================
     function navigateLightbox(direction) {
-
         const images = JSON.parse(lightbox.dataset.images || '[]');
 
         if (images.length <= 1) return;
-
         currentImageIndex += direction;
-
         if (currentImageIndex < 0) {
             currentImageIndex = images.length - 1;
         }
-
         if (currentImageIndex >= images.length) {
             currentImageIndex = 0;
         }
-
         lightboxImg.src = images[currentImageIndex];
     }
 
@@ -274,7 +257,6 @@ if (galleryItems.length > 0) {
     // Close Lightbox
     // ==========================
     function closeLightbox() {
-
         lightbox.classList.remove('open');
         document.body.style.overflow = 'auto';
 
@@ -286,13 +268,11 @@ if (galleryItems.length > 0) {
     if (lightboxClose) {
         lightboxClose.addEventListener('click', closeLightbox);
     }
-
     if (lightboxPrev) {
         lightboxPrev.addEventListener('click', () => {
             navigateLightbox(-1);
         });
     }
-
     if (lightboxNext) {
         lightboxNext.addEventListener('click', () => {
             navigateLightbox(1);
@@ -303,40 +283,29 @@ if (galleryItems.length > 0) {
     // Click Outside To Close
     // ==========================
     if (lightbox) {
-
         lightbox.addEventListener('click', (e) => {
-
             if (e.target === lightbox) {
                 closeLightbox();
             }
-
         });
-
     }
 
     // ==========================
     // Keyboard Controls
     // ==========================
     document.addEventListener('keydown', (e) => {
-
         if (!lightbox.classList.contains('open')) return;
-
         if (e.key === 'Escape') {
             closeLightbox();
         }
-
         if (e.key === 'ArrowLeft') {
             navigateLightbox(-1);
         }
-
         if (e.key === 'ArrowRight') {
             navigateLightbox(1);
         }
-
     });
-
 }
-
 
   // ==========================================================================
   // 6. CATERING PRICE CALCULATOR (Quotes page)
@@ -722,7 +691,7 @@ if (galleryItems.length > 0) {
       }
     });
 
-    // Clear validation error styling dynamically when typing/fixing
+    // Clear validation error styling dynamically when typing
     const bookingFormInputs = bookingForm.querySelectorAll('input, select, textarea');
     bookingFormInputs.forEach(input => {
       input.addEventListener('input', function() {
@@ -816,7 +785,7 @@ if (galleryItems.length > 0) {
       }
     });
 
-    // Clear validation error styling dynamically when typing/fixing
+    // Clear validation error styling dynamically when typing
     const contactFormInputs = contactForm.querySelectorAll('input, textarea');
     contactFormInputs.forEach(input => {
       input.addEventListener('input', function() {
@@ -897,25 +866,20 @@ if (galleryItems.length > 0) {
     const reviewFormInputs = reviewForm.querySelectorAll('input, textarea');
     reviewFormInputs.forEach(input => { input.addEventListener('input', function() { markValid(this); }); });
   }
-
 });
 
-// ==========================================================================
-// 10. PACKAGE IMAGE SLIDER (Homepage)
-// ==========================================================================
-
-const packageSliders = document.querySelectorAll('.pack-card-image');
-
-packageSliders.forEach(slider => {
+ // ==========================================================================
+ // 10. PACKAGE IMAGE SLIDER (Homepage)
+ // ==========================================================================
+ const packageSliders = document.querySelectorAll('.pack-card-image');
+ packageSliders.forEach(slider => {
 
     const images = slider.querySelectorAll('.slider-image');
     const prevBtn = slider.querySelector('.prev-btn');
     const nextBtn = slider.querySelector('.next-btn');
 
     if (images.length === 0 || !prevBtn || !nextBtn) return;
-
     let currentIndex = 0;
-
     function showSlide(index) {
         images.forEach(img => img.classList.remove('active'));
         images[index].classList.add('active');
